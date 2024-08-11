@@ -7,7 +7,7 @@ class Node {
   }
 }
 
-class LinkedList {
+class SinglyLinkedList {
   constructor(head = null) {
     this.head = head;
   }
@@ -95,8 +95,44 @@ class LinkedList {
       currentPosition++;
     }
 
-    previous.next = current;
-    newNode.next = current;
+    if (previous) {
+      previous.next = newNode;
+      newNode.next = current;
+    }
+  }
+
+  pop() {
+    if (!this.head) return null;
+
+    if (!this.head.next) {
+      const data = this.head.data;
+      this.head = null;
+      return data;
+    }
+
+    let current = this.head;
+
+    while (current.next.next) {
+      current = current.next;
+    }
+
+    current.next = null;
+    return current.data;
+  }
+
+  printList() {
+    let current = this.head;
+    let listString = "";
+
+    while (current) {
+      listString += current.data;
+      if (current.next) {
+        listString += " -> ";
+      }
+      current = current.next;
+    }
+
+    console.log(listString);
   }
 }
 
@@ -105,6 +141,6 @@ linkedList.append(1);
 linkedList.append(2);
 linkedList.append(3);
 
-linkedList.remove(2);
+linkedList.pop();
 
 console.log(linkedList);
