@@ -96,7 +96,6 @@ class DoublyLinkedList {
 
   inserAtPosition(data, position) {
     const newNode = new Node(data);
-    // case 1: Inset at position 0
     if (position === 0) {
       if (this.head) {
         newNode.next = this.head;
@@ -117,7 +116,7 @@ class DoublyLinkedList {
       currentPosition++;
     }
 
-    if (previous && !current) {
+    if (!current) {
       previous.next = newNode;
       newNode.prev = previous;
       return;
@@ -128,10 +127,6 @@ class DoublyLinkedList {
       newNode.prev = previous;
       newNode.next = current;
       current.prev = newNode;
-
-      if (current) {
-        current.prev = newNode;
-      }
     }
   }
 
