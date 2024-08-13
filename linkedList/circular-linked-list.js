@@ -155,4 +155,4 @@ circularLinkedList.append(3);
 circularLinkedList.append(4);
 circularLinkedList.append(5);
 
-console.log(circularLinkedList.head);
+console.log(circularLinkedList.head.prev); // true

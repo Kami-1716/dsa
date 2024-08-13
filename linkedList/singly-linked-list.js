@@ -1,3 +1,17 @@
+// define linked list
+// Linked list is a data structure that consists of a sequence of elements, where each element points to the next element in the sequence. It is a linear data structure that does not store the elements in contiguous memory locations.
+
+// use cases
+// 1. Linked list is used to implement stacks and queues.
+// 2. Linked list is used to implement graphs and trees.
+// 3. Linked list is used in image viewer, music player, etc.
+
+// real world application
+// 1. Linked list is used in image viewer, music player, etc.
+// 2. Linked list is used in undo functionality of softwares.
+// 3. Linked list is used in browser history.
+// 4. Linked list is used in navigation systems.
+
 // create a linked list
 
 class Node {
